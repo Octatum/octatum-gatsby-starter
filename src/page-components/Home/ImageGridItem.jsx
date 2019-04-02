@@ -28,7 +28,7 @@ const imageStyles = {
   width: '100%',
 };
 
-function ProjectBox(props) {
+const ImageGridItem = props => {
   const { project } = props;
   const projectCleanName = getCleanName(project.name);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -73,6 +73,6 @@ function ProjectBox(props) {
       ))}
     </ImageBox>
   );
-}
+};
 
-export default ProjectBox;
+export default ImageGridItem;

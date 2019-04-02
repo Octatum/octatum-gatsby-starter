@@ -7,7 +7,7 @@ import SectionHeader from './SectionHeader';
 import { mediaQueries } from '../../utils/theme';
 import { navigationIds } from '../../components/Navhub';
 import SectionDiv from '../../components/SectionDiv';
-import ProjectBox from './ProjectBox';
+import ImageGridItem from './ImageGridItem';
 
 const Grid = styled(Flex)`
   display: grid;
@@ -26,7 +26,7 @@ const Grid = styled(Flex)`
   }
 `;
 
-const Projects = () => {
+const WithImageGrid = () => {
   const projectsQueryData = useStaticQuery(graphql`
     {
       allSanityProject {
@@ -57,18 +57,18 @@ const Projects = () => {
       <SectionDiv id={navigationIds.projects} />
       <Flex justifyContent="flex-start">
         <SectionHeader
-          topText="Explora"
-          lightText="nuestro"
-          greenText="PASADO"
+          topText="Picture grids!"
+          lightText="they're also "
+          greenText="responsive"
         />
       </Flex>
       <Grid>
         {projects.map(project => (
-          <ProjectBox key={project.name} project={project} />
+          <ImageGridItem key={project.name} project={project} />
         ))}
       </Grid>
     </CommonContainer>
   );
 };
 
-export default Projects;
+export default WithImageGrid;

@@ -2,12 +2,15 @@ import React from 'react';
 
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
-import Projects from '../page-components/Home/Projects';
-import Contact from '../page-components/Home/ContactForm';
+import WithImageGrid from '../page-components/Home/WithImageGrid';
+import Contact from '../page-components/Home/Contact';
 import Footer from '../components/Footer';
-import Nosotros from '../page-components/Home/Nosotros';
+import PageSection from '../page-components/Home/PageSection';
 
-const description = `Para nosotros, las _páginas web_ son un punto de encuentro donde se genera una comunidad alrededor de los usuarios, de forma **atemporal** y sin fronteras, desde la comodidad de su hogar, mientras viajan en el transporte público, durante la espera antes de alguna cita, o en sus ratos libres. Por eso, ayudamos a nuestros clientes a crear nuevas experiencias en internet, acompañandolos en un proceso tanto **creativo** como **técnico**.`;
+const text = {
+  about: `Plus there's always Markdown for you to write stuff down. _Italics_, **bold**, and ~~strikethrough~~ shenanigans are on the ready and at your disposal.`,
+  moreText: `So enjoy yourself, shouldn't take too long to get used to~.`,
+};
 
 const IndexPage = () => (
   <Layout>
@@ -20,8 +23,8 @@ const IndexPage = () => (
         'react',
       ]}
     />
-    <Projects />
-    <Nosotros description={description} />
+    <WithImageGrid />
+    <PageSection text={text} />
     <Contact />
     <Footer />
   </Layout>

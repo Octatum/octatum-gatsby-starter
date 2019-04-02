@@ -7,42 +7,44 @@ import Text, { MarkdownText } from '../../components/Text';
 import SectionHeader from './SectionHeader';
 import { navigationIds } from '../../components/Navhub';
 import SectionDiv from '../../components/SectionDiv';
+import GreenDivider from '../../components/GreenDivider';
 
-const GreenBox = styled(Box)`
-  background: ${props => props.theme.color.green};
-`;
-
-const Nosotros = props => (
+const PageSection = ({ text }) => (
   <section>
     <CommonContainer pt={4}>
       <SectionDiv id={navigationIds.about} />
       <SectionHeader
-        topText="Conoce"
-        lightText="nuestro"
-        greenText="PRESENTE"
+        topText="We got text too"
+        lightText="Nice and "
+        greenText="spacious"
       />
       <Box py={4}>
         <Text align="right" size={3}>
-          ¿Cómo
+          Subheaders
           <br />
-          creamos arte
+          are nice too~
           <br />
-          web?
+          I'm sure
         </Text>
       </Box>
     </CommonContainer>
-    <Flex>
-      <GreenBox my={3} pt={1} width={2 / 3} />
-      <GreenBox py={3} width={1 / 3} />
-    </Flex>
+    <GreenDivider />
     <CommonContainer py={5} justifyContent="flex-end">
       <Box width={[1, 1, 2 / 3]} ml="auto">
         <MarkdownText size={2} align="right" lineHeight={1.5}>
-          {props.description}
+          {text.about}
+        </MarkdownText>
+      </Box>
+    </CommonContainer>
+    <GreenDivider left />
+    <CommonContainer py={5} justifyContent="flex-end">
+      <Box width={[1, 1, 2 / 3]} mr="auto">
+        <MarkdownText size={2} align="left" lineHeight={1.5}>
+          {text.moreText}
         </MarkdownText>
       </Box>
     </CommonContainer>
   </section>
 );
 
-export default Nosotros;
+export default PageSection;

@@ -11,7 +11,7 @@ import { navigationIds } from '../../components/Navhub';
 
 const formName = 'Contacto';
 
-function Contact() {
+const Contact = () => {
   const [messageSent, setMessageSent] = useState(false);
   const [formError, setFormError] = useState(false);
 
@@ -43,9 +43,9 @@ function Contact() {
       <SectionDiv id={navigationIds.contact} />
       <Flex>
         <SectionHeader
-          topText="Armemos"
-          lightText="un gran"
-          greenText="FUTURO"
+          topText="What's a site"
+          lightText="without a "
+          greenText="contact form?"
         />
       </Flex>
       <Formik
@@ -119,6 +119,6 @@ function Contact() {
       />
     </CommonContainer>
   );
-}
+};
 
 export default Contact;
