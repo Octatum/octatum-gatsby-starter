@@ -1,0 +1,61 @@
+{
+  "name": "octatum-website",
+  "private": true,
+  "description": "Octatum's Gatsby website",
+  "version": "0.1.0",
+  "author": "Octatum <contacto@octatum.com>",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-brands-svg-icons": "^5.8.1",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@rebass/grid": "^6.0.0",
+    "babel-plugin-styled-components": "^1.10.0",
+    "formik": "^1.5.1",
+    "gatsby": "^2.3.4",
+    "gatsby-image": "^2.0.35",
+    "gatsby-plugin-google-analytics": "^2.0.18",
+    "gatsby-plugin-google-fonts": "0.0.4",
+    "gatsby-plugin-manifest": "^2.0.26",
+    "gatsby-plugin-netlify": "^2.0.13",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.1",
+    "gatsby-plugin-react-helmet": "^3.0.11",
+    "gatsby-plugin-sharp": "^2.0.32",
+    "gatsby-plugin-sitemap": "^2.0.11",
+    "gatsby-plugin-styled-components": "^3.0.7",
+    "gatsby-source-filesystem": "^2.0.28",
+    "gatsby-source-sanity": "^2.0.2",
+    "gatsby-transformer-sharp": "^2.1.17",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0",
+    "react-image-gallery": "^0.8.14",
+    "react-markdown": "^4.0.6",
+    "react-spring": "^8.0.18",
+    "styled-components": "^4.2.0",
+    "yup": "^0.26.10"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "format": "prettier --write 'src/**/*.jsx' 'src/**/*.js'",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
+  "devDependencies": {
+    "prettier": "^1.16.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
