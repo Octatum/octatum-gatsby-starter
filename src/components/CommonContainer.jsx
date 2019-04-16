@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Box } from '@rebass/grid';
+import { Box } from 'rebass';
 
 const CommonContainer = styled(Box).attrs({
   px: [3, 3, 5],

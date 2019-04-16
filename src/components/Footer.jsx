@@ -1,11 +1,11 @@
 import React from 'react';
-import { Box } from '@rebass/grid';
+import { Box } from 'rebass';
 import Text from './Text';
 import styled from 'styled-components';
 import CommonContainer from './CommonContainer';
 
 const Border = styled('div')`
-  border-top: 1px solid ${({ theme }) => theme.color.green};
+  border-top: 1px solid ${({ theme }) => theme.colors.green};
 `;
 
 function Footer() {
@@ -14,10 +14,10 @@ function Footer() {
       <Border />
       <CommonContainer py={4}>
         <Box width={1}>
-          <Text align="center" font="secondary">
-            Copyright © Todos los derechos reservados.{' '}
-            <Text as="span" color="green" bold font="secondary">
-              Interaxo Labs S.A. de C.V. 2019.
+          <Text fontSize={2} textAlign="center" fontFamily="serif">
+            Copyright © All rights reserved.{' '}
+            <Text fontSize={2} as="span" color="green" bold fontFamily="serif">
+              Fake company {new Date().getFullYear()}.
             </Text>
           </Text>
         </Box>

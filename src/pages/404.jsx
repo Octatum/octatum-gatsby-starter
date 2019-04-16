@@ -1,10 +1,10 @@
 import React from 'react';
 
 import Layout from '../components/Layout';
-import SEO from '../components/seo';
+import SEO from '../components/SEO';
 import CommonContainer from '../components/CommonContainer';
 import Text from '../components/Text';
-import { Box, Flex } from '@rebass/grid';
+import { Box, Flex } from 'rebass';
 import { Link } from 'gatsby';
 
 const NotFoundPage = props => {
@@ -21,18 +21,18 @@ const NotFoundPage = props => {
         flexDirection="column"
       >
         <Box pb={3}>
-          <Text font="secondary" align="center" size={10}>
+          <Text fontFamily="serif" textAlign="center" size={10}>
             ¡No encontré la página!
           </Text>
         </Box>
         <Box>
-          <Text align="center" size={3}>
+          <Text textAlign="center" size={3}>
             la ruta {location} no existe.
           </Text>
         </Box>
         <Box pt={3}>
           <Text
-            align="center"
+            textAlign="center"
             size={2}
             as={Link}
             color="green"

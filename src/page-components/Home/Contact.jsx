@@ -3,9 +3,8 @@ import { Formik, Field } from 'formik';
 import { encode } from '../../utils/functions';
 import CommonContainer from '../../components/CommonContainer';
 import LabelInput from '../../components/LabelInput';
-import { Flex, Box } from '@rebass/grid';
+import { Flex, Box } from 'rebass';
 import Button from '../../components/Button';
-import SectionHeader from './SectionHeader';
 import SectionDiv from '../../components/SectionDiv';
 import { navigationIds } from '../../components/Navhub';
 
@@ -29,7 +28,7 @@ const Contact = () => {
         }),
       });
       setMessageSent(true);
-      alert('Tu mensaje ha sido enviado');
+      alert('Your message has been sent');
       actions.resetForm();
     } catch (exception) {
       setFormError(true);
@@ -41,13 +40,6 @@ const Contact = () => {
   return (
     <CommonContainer py={2}>
       <SectionDiv id={navigationIds.contact} />
-      <Flex>
-        <SectionHeader
-          topText="What's a site"
-          lightText="without a "
-          greenText="contact form?"
-        />
-      </Flex>
       <Formik
         initialValues={{
           name: '',
@@ -78,7 +70,7 @@ const Contact = () => {
               <Flex flexDirection={['column', 'column', 'row']}>
                 <Box pb={2} width={[1, 1, 1 / 2]} pr={[0, 0, 5]}>
                   <LabelInput
-                    text="Nombre"
+                    text="Name"
                     name="name"
                     autoComplete="name"
                     disabled={disabled}
@@ -86,7 +78,7 @@ const Contact = () => {
                 </Box>
                 <Box pb={2} width={[1, 1, 1 / 2]} pl={[0, 0, 5]}>
                   <LabelInput
-                    text="Correo"
+                    text="Email"
                     name="email"
                     autoComplete="email"
                     type="email"
@@ -95,21 +87,15 @@ const Contact = () => {
                 </Box>
               </Flex>
               <LabelInput
-                text="Mensajes"
+                text="Message"
                 name="message"
                 disabled={disabled}
                 component="textarea"
               />
               <Flex pt={3}>
                 <Box ml="auto">
-                  <Button
-                    px={4}
-                    py={2}
-                    disabled={disabled}
-                    medium
-                    type="submit"
-                  >
-                    Enviar
+                  <Button px={4} py={2} disabled={disabled} type="submit">
+                    Send
                   </Button>
                 </Box>
               </Flex>

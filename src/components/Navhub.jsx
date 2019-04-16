@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
-import { Flex, Box } from '@rebass/grid';
+import { Flex, Box } from 'rebass';
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
@@ -27,7 +27,7 @@ const Address = styled(Box)`
     left: 0;
     height: 0;
     width: 2em;
-    border: 1px solid ${props => props.theme.color.green};
+    border: 1px solid ${({ theme }) => theme.colors.green};
   }
 `;
 
@@ -38,12 +38,12 @@ const GreenIcon = styled(OutboundLink)`
   height: 2.2em;
   width: 2.2em;
   border-radius: 50%;
-  background: ${props => props.theme.color.green};
+  background: ${({ theme }) => theme.colors.green};
 `;
 
 const Icon = styled(FontAwesomeIcon)`
   font-size: 1.15em;
-  color: ${props => props.theme.color.black};
+  color: ${({ theme }) => theme.colors.black};
   text-decoration: none;
 `;
 
@@ -108,7 +108,7 @@ const Navhub = ({ closeNavhub, open }) => {
                 <Text
                   color="white"
                   as="p"
-                  align="left"
+                  textAlign="left"
                   size={1}
                   lineHeight="1"
                   uppercase
@@ -117,10 +117,10 @@ const Navhub = ({ closeNavhub, open }) => {
                 </Text>
                 <Text
                   as="h2"
-                  font="secondary"
+                  fontFamily="serif"
                   lineHeight="1"
                   size={7}
-                  align="left"
+                  textAlign="left"
                   style={{ marginTop: '-0.1em' }}
                   bold
                   italic
@@ -131,7 +131,7 @@ const Navhub = ({ closeNavhub, open }) => {
               </Box>
             </Address>
             <Box pt={3}>
-              <Text font="secondary" color="white" as="p">
+              <Text fontFamily="serif" color="white" as="p">
                 contacto@octatum.com
               </Text>
             </Box>
@@ -146,33 +146,33 @@ const Navhub = ({ closeNavhub, open }) => {
               <LinkBox to={`/#${navigationIds.projects}`}>
                 <Text color="white" size={3} as="p">
                   Explora nuestro{' '}
-                  <Text color="white" as="span" font="secondary" bold italic>
+                  <Text color="white" as="span" fontFamily="serif" bold italic>
                     pasado
                   </Text>
                 </Text>
-                <Text size={1} font="secondary" color="white">
+                <Text size={1} fontFamily="serif" color="white">
                   proyectos
                 </Text>
               </LinkBox>
               <LinkBox to={`/#${navigationIds.about}`}>
                 <Text color="white" size={3} as="p">
                   Conoce nuestro{' '}
-                  <Text color="white" as="span" font="secondary" bold italic>
+                  <Text color="white" as="span" fontFamily="serif" bold italic>
                     presente
                   </Text>
                 </Text>
-                <Text size={1} font="secondary" color="white">
+                <Text size={1} fontFamily="serif" color="white">
                   nosotros
                 </Text>
               </LinkBox>
               <LinkBox to={`/#${navigationIds.contact}`}>
                 <Text color="white" size={3} as="p">
                   Armemos un gran{' '}
-                  <Text color="white" as="span" font="secondary" bold italic>
+                  <Text color="white" as="span" fontFamily="serif" bold italic>
                     futuro
                   </Text>
                 </Text>
-                <Text size={1} font="secondary" color="white">
+                <Text size={1} fontFamily="serif" color="white">
                   contacto
                 </Text>
               </LinkBox>
@@ -181,7 +181,7 @@ const Navhub = ({ closeNavhub, open }) => {
           <Box>
             <Flex justifyContent="space-between" alignItems="center">
               <Box>
-                <Text color="white" font="secondary">
+                <Text color="white" fontFamily="serif">
                   Creando{' '}
                   <Text as="span" weight="900" color="white">
                     arte web{' '}

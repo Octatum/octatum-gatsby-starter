@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import { Field } from 'formik';
-import { withTextStyle } from './Text';
 
-const withInputStyle = Component => styled(withTextStyle(Component))`
+const withInputStyle = Component => styled(Component)`
   width: 100%;
   background: #f1f1f1;
   border: none;

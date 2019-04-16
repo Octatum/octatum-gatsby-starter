@@ -1,6 +1,6 @@
 import React from 'react';
 import Text from './Text';
-import { Box } from '@rebass/grid';
+import { Box } from 'rebass';
 import Input from './Input';
 
 function LabelInput(props) {
@@ -8,7 +8,7 @@ function LabelInput(props) {
   return (
     <label>
       <Box py={2}>
-        <Text>{text}</Text>
+        <Text fontSize={2}>{text}</Text>
       </Box>
       <Input {...rest} />
     </label>

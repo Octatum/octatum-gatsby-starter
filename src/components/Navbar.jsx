@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Flex, Box } from '@rebass/grid';
+import { Flex, Box } from 'rebass';
 import OctatumLogo from '../assets/octatum-black.svg';
 import Navhub from './Navhub';
-import BurgerMenu from './BurgerMenu';
 import { Link } from 'gatsby';
 
-const Container = styled.div`
+const Container = styled(Box)`
   position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1;
-  background: ${({ theme }) => theme.color.white};
   border-bottom: 1px solid #dfdfdf;
   transition: all 0.4s;
 `;
@@ -50,7 +47,7 @@ const Navbar = () => {
   }
 
   return (
-    <Container className={top ? 'top' : ''}>
+    <Container width={1} bg="white" className={top ? 'top' : ''}>
       <StyledFlex
         mx="auto"
         px={[3, 3, 5]}
@@ -59,11 +56,8 @@ const Navbar = () => {
       >
         <Box>
           <Link style={{ display: 'block' }} to="/">
-            <Image alt="Logotipo de Octatum" src={OctatumLogo} />
+            <Image alt="Simple logo" src={OctatumLogo} />
           </Link>
-        </Box>
-        <Box onClick={openNavhub} style={{ cursor: 'pointer' }}>
-          <BurgerMenu open={navhubOpen} />
         </Box>
       </StyledFlex>
       <Navhub closeNavhub={closeNavhub} open={navhubOpen} />

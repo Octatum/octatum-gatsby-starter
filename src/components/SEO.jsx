@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
-const generalTitle = 'Octatum Desarrollo Web';
+const generalTitle = 'Octatum Gatsby Starter';
 
 function SEO(props) {
   const { description, lang, meta, keywords, title } = props;
