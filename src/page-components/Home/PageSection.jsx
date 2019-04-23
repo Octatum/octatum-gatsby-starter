@@ -3,13 +3,10 @@ import { Box } from 'rebass';
 
 import CommonContainer from '../../components/CommonContainer';
 import Text, { MarkdownText } from '../../components/Text';
-import { navigationIds } from '../../components/Navhub';
-import SectionDiv from '../../components/SectionDiv';
 
 const PageSection = ({ text }) => (
   <section>
     <CommonContainer pt={4}>
-      <SectionDiv id={navigationIds.about} />
       <Box py={4}>
         <Text fontSize={5} as="h1">
           {text.header}

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Flex, Box } from 'rebass';
-import OctatumLogo from '../assets/octatum-black.svg';
-import Navhub from './Navhub';
 import { Link } from 'gatsby';
+import OctatumLogo from '../assets/octatum-black.svg';
 
 const Container = styled(Box)`
   position: sticky;
@@ -25,7 +24,6 @@ const Image = styled.img`
 `;
 
 const Navbar = () => {
-  const [navhubOpen, setNavhubOpen] = useState(false);
   const [top, setTop] = useState(true);
 
   useEffect(() => {
@@ -37,14 +35,6 @@ const Navbar = () => {
       window.onscroll = null;
     };
   });
-
-  function closeNavhub() {
-    setNavhubOpen(false);
-  }
-
-  function openNavhub() {
-    setNavhubOpen(true);
-  }
 
   return (
     <Container width={1} bg="white" className={top ? 'top' : ''}>
@@ -60,7 +50,6 @@ const Navbar = () => {
           </Link>
         </Box>
       </StyledFlex>
-      <Navhub closeNavhub={closeNavhub} open={navhubOpen} />
     </Container>
   );
 };

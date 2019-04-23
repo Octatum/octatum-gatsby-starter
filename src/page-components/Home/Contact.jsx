@@ -5,8 +5,6 @@ import CommonContainer from '../../components/CommonContainer';
 import LabelInput from '../../components/LabelInput';
 import { Flex, Box } from 'rebass';
 import Button from '../../components/Button';
-import SectionDiv from '../../components/SectionDiv';
-import { navigationIds } from '../../components/Navhub';
 
 const formName = 'Contacto';
 
@@ -39,7 +37,6 @@ const Contact = () => {
 
   return (
     <CommonContainer py={2}>
-      <SectionDiv id={navigationIds.contact} />
       <Formik
         initialValues={{
           name: '',
